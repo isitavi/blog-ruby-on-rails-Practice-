@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html>
+    <title>Blog Posts</title>
+    <h1>All Articles</h1>
+    <% @posts.each do |post|%>
+        <div class="well">
+            <h2><%= post.title%></h2>
+            <h2><%= post.body%></h2> 
+            <%= link_to "Read More", post_path(post), :class => 'btn btn-default' %>
+        </div>
+    <% end %>
+</html>
